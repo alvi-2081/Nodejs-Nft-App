@@ -19,12 +19,13 @@ const addproduct = async (req, res) => {
             sub_category: req.body.sub_category,
             status: req.body.status,
             userid: req.user._id,
-            image: "localhost:3005/" + req.file.path
+            image: "https://stormy-turtleneck-bat.cyclic.app/" + req.file.path
         })
         let insertprod = await addprod.save();
         console.log(insertprod)
         res.send(insertprod)
     } catch (e) {
+        console.log("not uploaded-----------")
         res.send(e)
         console.log(e)
     }
