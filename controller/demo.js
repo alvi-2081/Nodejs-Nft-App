@@ -306,16 +306,17 @@ const signIn = async (req, res) => {
                 let response = res.statusCode;
                 let messages = "Login Successful ";
                 let status = true;
-                let Data = { name: user.first_name, tokens };
+                let Data = { first_name: user.first_name, last_name: user.last_name, email: user.email, phone_number: user.phone_number, tokens };
                 return res.status(200).send({ response: response, message: messages, status: status, Data: Data })
             }
             helperfunction()
         } else {
-            return res.status(400).send("Invalid Credentials");
+            return res.status(400).send({ response: 400, message: "Invalid Credentials", status: false })
         }
 
     } catch (err) {
         console.log(err);
+        res.status(500).send(e)
     }
 }
 
