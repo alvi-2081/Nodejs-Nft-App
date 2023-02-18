@@ -23,6 +23,7 @@ const fileFilter = (req, file, cb) => {
 //upload name k folder may files save hogi
 const upload = multer({ storage: storage, fileFilter: fileFilter })
 
+
 //Get All Product
 router.get("/api/allproduct", [verifyToken], allproduct);
 //Change Owner
