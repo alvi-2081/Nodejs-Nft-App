@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 //creating schema of ads detail
+
 const user_schema = new mongoose.Schema({
     first_name: {
         type: String,
@@ -29,15 +30,6 @@ const user_schema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    user_image: {
-        type: String,
-        required: true,
-    },
-    role: {
-        type: Schema.Types.ObjectId,
-        ref: "role"
-    }
-
 })
 
 //creating collection

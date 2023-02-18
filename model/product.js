@@ -14,14 +14,7 @@ const product_schema = new mongoose.Schema({
         type: Date,
         default: new Date()
     },
-    category: {
-        type: Schema.Types.ObjectId,
-        ref: "category"
-    },
-    sub_category: {
-        type: Schema.Types.ObjectId,
-        ref: "category"
-    },
+
     status: {
         type: Boolean,
         default: true
