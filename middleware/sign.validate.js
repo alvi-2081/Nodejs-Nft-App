@@ -1,6 +1,6 @@
 const { users } = require("../model/user")
 
-checkDuplicateEmail = async(req, res, next) => {
+checkDuplicateEmail = async (req, res, next) => {
     let data = await users.findOne({
         email: req.body.email
     })
